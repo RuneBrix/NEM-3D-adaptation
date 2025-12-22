@@ -1,0 +1,39 @@
+name: nem3d
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+dependencies:
+  # Core
+  - python=3.10
+  - pip
+  - numpy
+  - pandas
+  - scipy
+  - setuptools
+  - wheel
+  - tqdm
+  - typing-extensions
+
+  # PyTorch + CUDA 11.8 (works on most clusters)
+  - pytorch=2.2.*
+  - torchvision=0.17.*
+  - torchaudio=2.2.*
+  - pytorch-cuda=11.8
+
+  # Medical imaging + training
+  - monai=1.3.2
+  - SimpleITK
+  - nibabel
+  - scikit-image
+  - pytorch-lightning>=2,<3
+  - kornia=0.7.*
+  - matplotlib-base
+
+  - pyyaml
+
+  - pip:
+      - prodigyopt
+      - captum
+      - grad-cam
